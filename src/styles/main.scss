@@ -1,0 +1,317 @@
+@import "base/reset";
+@import "base/mixins";
+@import "base/variables";
+@import "base/fonts";
+@import "base/media768";
+@import "base/media320";
+@import "common/header";
+@import "common/footer";
+
+body {
+	height: $height;
+	margin: $margin;
+	overflow-x: hidden;
+}
+.wrapper {
+	max-width: $width;
+	height: $height;
+	margin: $margin;
+	background: $background-main;
+}
+
+.main {
+	height: $height;
+}
+
+.section_works {
+	margin: $margin;
+
+	.title {
+		@include title();
+	}
+
+	.container_works {
+		.card__container {
+			@include displayflex();
+			gap: 20px;
+		}
+
+		.card {
+			@include card();
+
+			.button_size_s {
+				@include btn-works();
+				margin-top: 224px;
+				margin-left: 39px;
+				cursor: $cursor;
+			}
+
+			.card__title {
+				margin-top: 18px;
+				@include title-cards();
+			}
+
+			.card__text {
+				@include text();
+			}
+		}
+
+		.card:nth-of-type(1) {
+			background-image: $bg-image-card1;
+		}
+
+		.card:nth-of-type(2) {
+			background-image: $bg-image-card2;
+		}
+
+		.card:nth-of-type(3) {
+			background-image: $bg-image-card3;
+		}
+	}
+}
+
+.section-partner {
+	max-width: $width-section;
+	margin: $margin;
+
+	.title {
+		@include title();
+	}
+
+	.container-partner {
+		margin: $margin;
+
+		.photo__container {
+			height: $height;
+			@include displayflex();
+			gap: 10px;
+
+			.photo__block {
+				@include photo__block();
+				position: relative;
+			}
+
+			.photo {
+				@include photo-size();
+				border-radius: $border-radius;
+				position: relative;
+			}
+
+			.photo_one {
+				background-image: url("../images/Bitmap1.png");
+				background-size: cover;
+			}
+
+			.photo_two {
+				background-image: url("../images/Bitmap2.png");
+			}
+
+			.photo_three {
+				background-image: url("../images/Bitmap3.png");
+			}
+
+			.photo_four {
+				background-image: url("../images/Bitmap4.png");
+			}
+
+			.avatar {
+				width: 32px;
+				height: 32px;
+				background-size: 16px 16px;
+				background-repeat: no-repeat;
+				background-position: center;
+				border-radius: $border-radius;
+				position: absolute;
+				top: 90px;
+				left: 90px;
+				cursor: $cursor;
+			}
+
+			.avatar_one {
+				background-image: url("../images/music.webp");
+				background-color: rgb(236, 72, 72);
+			}
+
+			.avatar_two {
+				background-image: url("../images/pen.webp");
+				background-color: rgb(65, 203, 176);
+			}
+
+			.avatar_three {
+				background-image: url("../images/camera.webp");
+				background-color: rgb(215, 221, 32);
+			}
+
+			.avatar_four {
+				background-image: url("../images/plane-departure.webp");
+				background-color: rgb(172, 69, 203);
+			}
+
+			.photo__title {
+				@include font-mons();
+				font-size: $font-size-btn;
+				line-height: $line-height-btn2;
+				text-align: $text-align;
+				color: $color-title;
+				margin-top: 17px;
+			}
+
+			.photo__description {
+				@include font-roboto();
+				font-size: $font-size-btn;
+				line-height: $line-height-text;
+				text-align: $text-align;
+				color: $color-text;
+				margin-top: 12px;
+			}
+		}
+
+		.button-see {
+			display: $display-block;
+			width: 180px;
+			height: 40px;
+			background: $background-main;
+			border: 2px solid $background-btn;
+			border-radius: $border-radius-btn;
+			margin: $margin;
+			color: $color-text-btn;
+			@include font-mons();
+			font-size: $font-size-btn;
+			line-height: $line-height-btn2;
+			cursor: $cursor;
+			margin-top: 36px;
+		}
+	}
+}
+
+.section-ideas {
+	max-width: $width-section;
+	margin: $margin;
+
+	.title {
+		@include title();
+	}
+
+	.container-activity {
+		margin: $margin;
+		height: $height;
+
+		.container-ideas {
+			.box-ideas1,
+			.box-ideas2,
+			.box-ideas3 {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				gap: 20px;
+			}
+
+			.box-ideas2,
+			.box-ideas3 {
+				margin-top: 20px;
+			}
+
+			.card-idea {
+				@include card-idea();
+			}
+
+			.card__title {
+				@include title-cards();
+				margin-top: 136px;
+				word-break: break-all;
+				white-space: pre-wrap;
+			}
+
+			.card-idea2 {
+				width: 620px;
+				height: 310px;
+			}
+
+			.idea1 {
+				background-image: $bg-image-idea1;
+				background-size: cover;
+			}
+
+			.idea2 {
+				background-image: $bg-image-idea2;
+				background-size: cover;
+			}
+
+			.idea3 {
+				background-image: $bg-image-idea3;
+				background-size: cover;
+			}
+
+			.idea4 {
+				background-image: $bg-image-idea4;
+				background-size: cover;
+			}
+
+			.idea5 {
+				background-image: $bg-image-idea5;
+				background-size: cover;
+			}
+
+			.idea6 {
+				background-image: $bg-image-idea6;
+				background-size: cover;
+			}
+
+			.idea7 {
+				background-image: $bg-image-idea7;
+				background-size: cover;
+			}
+		}
+	}
+}
+
+.title {
+	@include title();
+}
+.section-create {
+	margin: $margin;
+}
+.container-create {
+	width: 482px;
+	margin: $margin;
+}
+.text-question {
+	@include font-roboto();
+	font-size: $font-size-text-question;
+	line-height: $font-size-btn;
+	text-align: $text-align;
+	color: $color-text;
+	margin-bottom: 25px;
+}
+
+.box-form {
+	display: inline-flex;
+}
+
+.form {
+	display: $display-block;
+	height: 89px;
+}
+
+.text-input {
+	@include placeholder-size();
+	margin-right: 10px;
+	padding-left: 20px;
+}
+
+.button-search {
+	display: $display-block;
+	width: 172.12px;
+	height: 40px;
+	background: $background-btn;
+	border-radius: $border-radius-btn;
+	color: $color-font;
+	border: $border-btn;
+	margin: $margin;
+	margin-top: 37px;
+	margin-bottom: 100px;
+	@include font-mons();
+	font-size: $font-size-btn;
+	line-height: $line-height-btn2;
+	cursor: $cursor;
+}

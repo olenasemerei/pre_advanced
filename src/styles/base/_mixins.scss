@@ -1,0 +1,132 @@
+@mixin displayflex {
+	display: $display;
+	justify-content: $justify-content;
+	align-items: $align-items;
+}
+
+@mixin size-section {
+	width: $width-section;
+	height: $height;
+}
+
+@mixin photo__block {
+	width: $width-photo__block;
+	height: $height-photo__block;
+	margin: $margin;
+}
+
+@mixin photo-size {
+	width: $width-photo;
+	height: $height-photo;
+	margin: $margin;
+}
+
+@mixin card {
+	width: $width-card;
+	height: $height-card;
+	background-size: $bg-size;
+	background-repeat: $bg-repeat;
+}
+
+@mixin card-idea {
+	width: $width-card;
+	height: $height-idea;
+	background-size: $bg-size;
+	background-repeat: $bg-repeat;
+}
+
+@mixin font-mons {
+	font-family: $font-family;
+	font-style: $font-style;
+	font-weight: $font-weight700;
+}
+
+@mixin font-roboto {
+	font-family: $font-family-text;
+	font-style: $font-style;
+	font-weight: $font-weight300;
+}
+
+@mixin title {
+	@include font-mons();
+	font-size: $font-size-title;
+	line-height: $line-height-title;
+	text-align: $text-align;
+	color: $color-title;
+	margin-top: $margin-top-title;
+	margin-bottom: $margin-bottom-title;
+}
+
+@mixin section-creates {
+	width: 482px;
+	height: $height;
+}
+
+@mixin title-cards {
+	font-family: $font-family;
+	font-style: $font-style;
+	font-weight: $font-weight700;
+	font-size: $font-size-card-idea;
+	line-height: $line-height-card-idea;
+	text-align: $text-align;
+	color: $color-font;
+}
+
+@mixin btn-works {
+	width: 70px;
+	height: 20px;
+	background: $background-btn;
+	border-radius: $border-radius-btn;
+	border: $border-btn;
+	font-family: $font-family;
+	font-style: $font-style;
+	font-weight: $font-weight400;
+	font-size: $font-size-btn-step;
+	line-height: $line-height-btn-step;
+	align-items: $align-items;
+	letter-spacing: 2px;
+	color: $color-font;
+	margin: $margin;
+}
+
+@mixin text {
+	font-family: "Roboto";
+	font-style: $font-style;
+	font-weight: $font-weight300;
+	font-size: $font-size-btn;
+	line-height: $line-height-text;
+	color: $color-text-card;
+	margin: 20px;
+}
+
+@mixin placeholder-size {
+	width: 299px;
+	height: 40px;
+	border: $border-placeholder;
+	box-shadow: $box-shadow;
+	border-radius: 3px;
+}
+
+@mixin content1 {
+	content: url("/src/images/music.webp");
+	width: 16px;
+	height: 16px;
+	text-align: center;
+	line-height: 100px;
+	position: absolute;
+	background-color: $background-btn;
+	border-radius: $border-radius;
+	top: 20px;
+	right: 20px;
+	transition-duration: 0.3s;
+}
+
+@mixin size768 {
+	width: 768px;
+	margin: 0 auto;
+}
+
+@mixin size320 {
+	width: 320px;
+	margin: 0 auto;
+}

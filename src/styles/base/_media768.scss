@@ -1,0 +1,124 @@
+@import "../base/mixins";
+@import "../base/variables";
+
+@media all and (max-width: 768px) {
+	body {
+		.wrapper {
+			max-width: $width-media768;
+
+			.header {
+				.header__container {
+					width: $width-media768;
+					background-size: 768px 700px;
+
+					.header__block {
+						@include size768();
+					}
+				}
+			}
+
+			.main {
+				.section_works {
+					.container_works {
+						.title {
+							font-size: 22px;
+							line-height: 27px;
+							margin-top: 76px;
+						}
+
+						.card {
+							width: 236px;
+							height: 400px;
+							background-size: 236px 400px;
+						}
+
+						.card__title {
+							line-height: 14px;
+						}
+					}
+				}
+
+				.section-partner {
+					width: 492px;
+					margin: $margin;
+
+					.title {
+						font-size: 22px;
+						line-height: 27px;
+					}
+
+					.photo__container {
+						width: 492px;
+						flex-wrap: wrap;
+						margin: $margin;
+					}
+				}
+
+				.section-ideas {
+					.container-activity {
+						width: 748px;
+						height: $height;
+
+						.title {
+							font-size: 22px;
+							line-height: 27px;
+						}
+
+						.container-ideas {
+							max-width: 748px;
+
+							.box-ideas1,
+							.box-ideas2,
+							.box-ideas3 {
+								width: 748px;
+								height: 100%;
+							}
+
+							.card-idea {
+								width: 236px;
+								height: 310px;
+							}
+
+							.card-idea2 {
+								width: 492px;
+								height: 310px;
+							}
+
+							.card__title {
+								word-break: break-all;
+							}
+						}
+					}
+				}
+
+				.section-create {
+					.container-create {
+						.title {
+							font-size: 22px;
+							line-height: 27px;
+						}
+					}
+				}
+			}
+		}
+
+		.footer {
+			height: $height;
+			padding: 0px;
+
+			.footer__block {
+				@include size768();
+
+				.menu__list {
+					width: 461px;
+
+					.menu__link {
+						.list--second {
+							margin-left: 108px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

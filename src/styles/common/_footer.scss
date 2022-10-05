@@ -1,0 +1,76 @@
+@import "../base/mixins";
+@import "../base/variables";
+@import "../base/fonts";
+
+hr {
+	border-top: 1px solid red;
+}
+
+.footer__block {
+	display: $display;
+	justify-content: space-evenly;
+	padding-top: 40px;
+}
+
+.menu__list {
+	display: flex;
+	text-align: center;
+	margin: $margin;
+}
+.menu__list li {
+	list-style: none;
+}
+
+.menu__link {
+	text-decoration: none;
+	@include font-mons();
+	font-size: 14px;
+	line-height: 17px;
+	color: #444444;
+}
+
+.button_active {
+	color: $color-text-btn;
+	cursor: $cursor;
+}
+
+.list--second {
+	margin-top: 11px;
+	margin-left: 90px;
+
+	.list--second li {
+		list-style: none;
+	}
+
+	.menu__item {
+		display: $display-block;
+		padding-bottom: 13px;
+		color: #000;
+		text-decoration: none;
+		@include font-roboto();
+		font-size: 14px;
+		line-height: 26px;
+		text-align: left;
+		color: #999999;
+	}
+}
+
+.list--second li {
+	list-style: none;
+}
+
+.menu__list li {
+	list-style: none;
+}
+
+.logo {
+	.logo__description {
+		@include font-mons();
+		font-size: 10px;
+		line-height: 12px;
+		letter-spacing: 1px;
+		color: #cccccc;
+		margin-bottom: 10px;
+		margin-left: 20px;
+	}
+}

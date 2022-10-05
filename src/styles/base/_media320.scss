@@ -1,0 +1,202 @@
+@import "../base/fonts";
+@import "../base/variables";
+@import "../base/mixins";
+
+@media all and (max-width: 320px) {
+	body {
+		.wrapper {
+			width: $width-media320;
+
+			.header {
+				.header__container {
+					@include size320();
+					height: 540px;
+					padding-top: 0px;
+
+					.header__block {
+						@include size320();
+						display: flex;
+						flex-direction: column-reverse;
+
+						.logo__title {
+							display: block;
+							margin: $margin;
+							margin-top: 60px;
+						}
+
+						.btngroup {
+							margin: $margin;
+						}
+					}
+
+					.block__text {
+						.header__title {
+							font-size: 30px;
+							line-height: 37px;
+							margin-top: 20px;
+						}
+
+						.header__description {
+							font-size: 18px;
+						}
+
+						.header__button {
+							margin-top: 10px;
+						}
+					}
+				}
+			}
+
+			.main {
+				.section_works {
+					.container_works {
+						.card__container {
+							flex-direction: column;
+							gap: 10px;
+
+							.card {
+								width: $width-card;
+								height: 240px;
+								background-size: 300px 240px;
+								margin: $margin;
+
+								.button_size_s {
+									margin-top: 69px;
+								}
+							}
+						}
+					}
+				}
+
+				.section-partner {
+					width: $width-card;
+					margin: $margin;
+
+					.container-partner {
+						.photo__container {
+							width: $width-card;
+							display: flex;
+							flex-direction: column;
+						}
+					}
+				}
+
+				.section-ideas {
+					.container-activity {
+						width: $width-card;
+						margin: $margin;
+
+						.container-ideas {
+							height: $height;
+
+							.box-ideas1 {
+								width: $width-card;
+								height: $height;
+								display: flex;
+								flex-direction: column;
+								margin: 0 auto;
+								gap: 10px;
+							}
+
+							.box-ideas2 {
+								width: $width-card;
+								height: $height;
+								display: flex;
+								flex-direction: column;
+								margin: 0 auto;
+								margin-top: 10px;
+								gap: 10px;
+							}
+
+							.box-ideas3 {
+								width: $width-card;
+								height: $height;
+								display: flex;
+								flex-direction: column;
+								margin: 0 auto;
+								margin-top: 10px;
+								gap: 10px;
+							}
+
+							.card-idea,
+							.card-idea2 {
+								width: 300px;
+								height: 120px;
+							}
+
+							.card__title {
+								margin-top: 50px;
+							}
+						}
+					}
+				}
+
+				.container-create {
+					width: 280px;
+					margin: $margin;
+
+					.box-form {
+						width: 280px;
+						margin: 0 auto;
+						display: flex;
+						flex-direction: column;
+						.text-input {
+							width: 280px;
+						}
+					}
+				}
+			}
+
+			.footer {
+				margin: $margin;
+				height: $height;
+
+				.footer__container {
+					width: $width-media320;
+
+					.hr {
+						width: 318px;
+					}
+
+					.footer__block {
+						@include size320();
+						flex-direction: column;
+						align-items: $align-items;
+						gap: 10px;
+
+						.menu {
+							@include size320();
+
+							.menu__list {
+								@include size320();
+								flex-direction: column;
+								align-items: $align-items;
+								gap: 10px;
+
+								.menu__link {
+									margin-top: 20px;
+									text-align: center;
+									margin: $margin;
+								}
+
+								.list--second {
+									display: flex;
+									flex-wrap: wrap;
+									align-items: $align-items;
+
+									.menu__item {
+										margin-right: 10px;
+									}
+								}
+							}
+						}
+
+						.logo {
+							margin: $margin;
+						}
+					}
+				}
+			}
+		}
+	}
+}
